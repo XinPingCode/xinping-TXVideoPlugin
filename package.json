@@ -1,0 +1,26 @@
+{
+    "name": "xinping-TXVideoPlugin",
+    "id": "xinping-TXVideoPlugin",
+    "version": "0.0.1",
+    "description": "腾讯云多方视频插件",
+    "_dp_type": "nativeplugin",
+    "_dp_nativeplugin": {
+        "ios": {
+            "plugins": [{
+                "type": "module",
+                "name": "xinping-TXVideoPlugin-TestModule",
+                "class": "TestModule"
+            }, {
+                "type": "component",
+                "name": "dc-testmap",
+                "class": "TestComponent"
+            }],
+            "frameworks": ["MapKit.framework","TXLiteAVSDK_ReplayKitExt.framework","TXLiteAVSDK_TRTC.framework","Accelerate.framework","libc++.tbd"],
+            "integrateType": "framework",
+            "privacies": [
+                "NSMicrophoneUsageDescription","NSCameraUsageDescription"
+            ],
+            "deploymentTarget": "9.0"
+        }
+    }
+}
