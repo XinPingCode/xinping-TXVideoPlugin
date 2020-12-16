@@ -11,7 +11,7 @@ TXVideoSyncFunc:通过Module方式的同步调用弹出双人视频通话页面
 | :----:| :----: | :----: |
 | sdkAppId | Number | 应用标识 [必填]，腾讯云基于 sdkAppId 完成计费统计 |
 | userId | String | 用户标识 [必填]，当前用户的 userId，相当于登录用户名 |
-| roomId | Number | 字符串房间号码，在同一个房间里的用户（userId）可以彼此看到对方并进行视频通话 |
+| roomId | Number | 字符串房间号码[必填]，在同一个房间里的用户（userId）可以彼此看到对方并进行视频通话 |
 
   
 **4.代码示例**
@@ -23,7 +23,7 @@ TXVideoSyncFunc:通过Module方式的同步调用弹出双人视频通话页面
 var TXVideoPluginModule = uni.requireNativePlugin("xinping-TXVideoPlugin-TXVideoPluginModule")
 TXVideoSyncFunc() {
 				let params = {
-					sdkAppId: this.sdkAppId,
+					sdkAppId:this.sdkAppId,
 					userId:this.userId,
 					roomId:this.roomId
 				};
